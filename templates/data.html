@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h1>SCD</h1>
+            <ul class="links">
+                <li><a href="https://github.com/Hemanthhari2000">profile</a></li>
+                <li><a href="https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign">dataset</a></li>
+            </ul>
+
+        </nav>
+    </div><br>
+    <div class="content-wrapper">
+        <div class="contents">
+            <img src="{{url_for('load_img')}}" alt='img'><br>
+            <h1 style = "font-family: Montserrat;">{{output}}</h1>
+            <br>
+            <a href="/" class='back-btn'>Go Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

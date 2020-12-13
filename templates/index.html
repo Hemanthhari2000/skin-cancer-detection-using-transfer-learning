@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCD</title>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h1>SCD</h1>
+            <ul class="links">
+                <li><a href="https://github.com/Hemanthhari2000">profile</a></li>
+                <li><a href="https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign">dataset</a></li>
+            </ul>
+
+        </nav>
+    </div>
+    <div class="content-wrapper">
+        <div class="contents">
+            <h2>Skin Cancer Detection</h2><br><br>
+            <form class="form" method="POST" action="/predict" enctype="multipart/form-data">
+                <input type="file" name="image" id="real-file" hidden="hidden">
+                <!-- <input type="submit" value="Submit"> -->
+                <button type = "button" id = "custom-button">CHOOSE A PHOTO</button>
+                <span id = "custom-text">No File Chosen, Yet.</span>
+                <br><br>
+                <input type="submit" value="Submit" class="sub-btn">
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'index.js')}}"></script>
+</body>
+
+</html>
