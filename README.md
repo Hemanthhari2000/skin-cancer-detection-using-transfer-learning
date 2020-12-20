@@ -8,6 +8,8 @@ open cmd
 
 now just type ```python app.py```
 
+The app will be available in http://localhost:5000/
+
 Thats it. 
 
 click ```profile``` link to get the whole code.

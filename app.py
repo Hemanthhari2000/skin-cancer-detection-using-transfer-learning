@@ -16,9 +16,9 @@ def load_model_(image_path):
     saved_model = load_model('sav/vggmodel.h5')
     output = saved_model.predict(img)[0]
     if output[0] > output[1]:
-        res = f'Benign with probability:\t{round(output[0], 3)}'
+        res = f'Benign with probability:\t{round(output[0], 2)}'
     else:
-        res = f'Malignant with probability:\t{round(output[1],3)}'
+        res = f'Malignant with probability:\t{round(output[1], 2)}'
     return res
 
 
@@ -45,4 +45,4 @@ def load_img():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port = '5000')

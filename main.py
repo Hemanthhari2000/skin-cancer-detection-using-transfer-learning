@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 TRAIN_PATH = 'dataset/train/'
 VALIDATION_PATH = 'dataset/test/'
 
-PREDICT_IMAGE_PATH = 'dataset/predictions/bad_image.jpg'
+# PREDICT_IMAGE_PATH = 'dataset/predictions/bad_image.jpg'
 
 
 def create_model():
@@ -91,9 +91,9 @@ def predict_the_image(image_path):
     saved_model = load_model('sav/vggmodel.h5')
     output = saved_model.predict(img)[0]
     if output[0] > output[1]:
-        print(f'bad_image:\t{output[0]}')
+        print(f'Benign with probability:\t{round(output[0], 2)}')
     else:
-        print(f'good_image:\t{output[1]}')
+        print(f'Malignant with probability:\t{round(output[1], 2)}')
 
 
 def main():
